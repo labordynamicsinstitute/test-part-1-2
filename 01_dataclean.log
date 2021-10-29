@@ -166,10 +166,8 @@ _column(259) str8 finc %8s "Family Total Income in 1999"
 .   sort serialno   /* sort data by Serial Number */
 
 .   saveold "/home/vilhuber/Workspace/git/LDI/test-part-1-2/data/cleaned/housin
-> g.dta"  /* save housing unit data */
-(saving in Stata 13 format)
-(FYI, saveold has options version(12) and version(11) that write files in
-      older Stata formats)
+> g.dta", version(12)  /* save housing unit data */
+(saving in Stata 12 format, which can be read by Stata 11 or 12)
 file /home/vilhuber/Workspace/git/LDI/test-part-1-2/data/cleaned/housing.dta sa
 > ved
 
@@ -367,10 +365,8 @@ _column(312) str3 poverty %3s "Persons Poverty Status"
 .   sort serialno   /* sort data by Serial Number */
 
 .   saveold "/home/vilhuber/Workspace/git/LDI/test-part-1-2/data/cleaned/person
-> .dta" /* save person data */
-(saving in Stata 13 format)
-(FYI, saveold has options version(12) and version(11) that write files in
-      older Stata formats)
+> .dta", version(12) /* save person data */
+(saving in Stata 12 format, which can be read by Stata 11 or 12)
 file /home/vilhuber/Workspace/git/LDI/test-part-1-2/data/cleaned/person.dta sav
 > ed
 
@@ -400,10 +396,8 @@ pweight: all characters numeric; pweight_num generated as int
 .   label variable pweight_num "Person weight"
 
 .   saveold "/home/vilhuber/Workspace/git/LDI/test-part-1-2/data/cleaned/merged
-> .dta"  /* save merged data */
-(saving in Stata 13 format)
-(FYI, saveold has options version(12) and version(11) that write files in
-      older Stata formats)
+> .dta"  , version(12) /* save merged data */
+(saving in Stata 12 format, which can be read by Stata 11 or 12)
 file /home/vilhuber/Workspace/git/LDI/test-part-1-2/data/cleaned/merged.dta sav
 > ed
 

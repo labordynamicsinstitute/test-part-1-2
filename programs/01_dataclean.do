@@ -9,12 +9,12 @@
   clear
   infile using "/home/vilhuber/Workspace/git/LDI/test-part-1-2/programs/housing.dct" if rectype=="H", using ("/ramdisk/ICPSR_13568/DS0002/13568-0002-Data.txt")
   sort serialno   /* sort data by Serial Number */
-  saveold "/home/vilhuber/Workspace/git/LDI/test-part-1-2/data/cleaned/housing.dta"  /* save housing unit data */
+  saveold "/home/vilhuber/Workspace/git/LDI/test-part-1-2/data/cleaned/housing.dta", version(12)  /* save housing unit data */
 
   clear
   infile using "/home/vilhuber/Workspace/git/LDI/test-part-1-2/programs/person.dct" if rectype=="P", using ("/ramdisk/ICPSR_13568/DS0002/13568-0002-Data.txt")
   sort serialno   /* sort data by Serial Number */
-  saveold "/home/vilhuber/Workspace/git/LDI/test-part-1-2/data/cleaned/person.dta" /* save person data */
+  saveold "/home/vilhuber/Workspace/git/LDI/test-part-1-2/data/cleaned/person.dta", version(12) /* save person data */
 
   merge serialno using "/home/vilhuber/Workspace/git/LDI/test-part-1-2/data/cleaned/housing.dta" /* merge person and housing unit data */
   drop _merge
@@ -27,6 +27,6 @@
   /* label variables */
   label variable specific_ak "Identifying with one of the four tribes"
   label variable pweight_num "Person weight"
-  saveold "/home/vilhuber/Workspace/git/LDI/test-part-1-2/data/cleaned/merged.dta"  /* save merged data */
+  saveold "/home/vilhuber/Workspace/git/LDI/test-part-1-2/data/cleaned/merged.dta"  , version(12) /* save merged data */
   
   
