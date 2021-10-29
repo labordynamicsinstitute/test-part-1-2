@@ -165,8 +165,11 @@ _column(259) str8 finc %8s "Family Total Income in 1999"
 
 .   sort serialno   /* sort data by Serial Number */
 
-.   save "/home/vilhuber/Workspace/git/LDI/test-part-1-2/data/cleaned/housing.d
-> ta"  /* save housing unit data */
+.   saveold "/home/vilhuber/Workspace/git/LDI/test-part-1-2/data/cleaned/housin
+> g.dta"  /* save housing unit data */
+(saving in Stata 13 format)
+(FYI, saveold has options version(12) and version(11) that write files in
+      older Stata formats)
 file /home/vilhuber/Workspace/git/LDI/test-part-1-2/data/cleaned/housing.dta sa
 > ved
 
@@ -363,8 +366,11 @@ _column(312) str3 poverty %3s "Persons Poverty Status"
 
 .   sort serialno   /* sort data by Serial Number */
 
-.   save "/home/vilhuber/Workspace/git/LDI/test-part-1-2/data/cleaned/person.dt
-> a" /* save person data */
+.   saveold "/home/vilhuber/Workspace/git/LDI/test-part-1-2/data/cleaned/person
+> .dta" /* save person data */
+(saving in Stata 13 format)
+(FYI, saveold has options version(12) and version(11) that write files in
+      older Stata formats)
 file /home/vilhuber/Workspace/git/LDI/test-part-1-2/data/cleaned/person.dta sav
 > ed
 
